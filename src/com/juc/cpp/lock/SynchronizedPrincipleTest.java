@@ -2,6 +2,10 @@ package com.juc.cpp.lock;
 //javac
 //javap -c
 //javap -verbose
+/*
+同步方法：ACC_SYNCHRONIZED
+同步代码块： monitorenter  monitorexit
+ */
 public class SynchronizedPrincipleTest {
     public synchronized void f1() {
         System.out.println("synchronized void f1()");
