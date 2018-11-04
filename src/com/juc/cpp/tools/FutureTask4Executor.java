@@ -29,7 +29,8 @@ public class FutureTask4Executor {
         };
         // 创建线程池（使用了预定义的配置）
         ExecutorService executor = Executors.newCachedThreadPool();
-        executor.execute(futureTask);
+//        executor.execute(futureTask);
+        executor.submit(futureTask);
 
         try {
             Thread.sleep(1000);
@@ -45,5 +46,7 @@ public class FutureTask4Executor {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+
+        executor.shutdown();
     }
 }
